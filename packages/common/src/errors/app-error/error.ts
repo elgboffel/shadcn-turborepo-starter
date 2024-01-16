@@ -2,10 +2,10 @@ import { IError, ErrorMessage, NativeError } from "../types";
 
 export class Error implements IError {
   constructor(error: any) {
-    if (error instanceof NativeError) {
-      this.serializeError(error);
-      return;
-    }
+    // if (error instanceof NativeError) {
+    //   this.serializeError(error);
+    //   return;
+    // }
 
     if (this.isAppErrorType(error)) {
       this.serializeAppErrorType(error);
@@ -15,13 +15,13 @@ export class Error implements IError {
     this.invalidError(error);
   }
 
-  serializeError(error: NativeError) {
-    this.isSuccess = false;
-    this.raw = error?.stack ?? null;
-    this.url = null;
-    this.message = error?.message ? { code: null, value: error?.message } : null;
-    this.statusCode = 500;
-  }
+  // serializeError(error: NativeError) {
+  //   this.isSuccess = false;
+  //   this.raw = error?.stack ?? null;
+  //   this.url = null;
+  //   this.message = error?.message ? { code: null, value: error?.message } : null;
+  //   this.statusCode = 500;
+  // }
 
   serializeAppErrorType(error: IError) {
     this.isSuccess = error?.isSuccess ?? null;
