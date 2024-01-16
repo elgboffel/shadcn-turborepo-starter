@@ -17,15 +17,19 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "graphql": "16.8.1",
+    "isomorphic-fetch": "3.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "date-fns": "^2.30.0",
     "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
+    "@types/isomorphic-fetch": "0.0.39",
     "@project/eslint-config": "*",
     "@project/ts-config": "*",
     "tsup": "^6.0.1",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vitest": "1.2.0"
   }
 }
