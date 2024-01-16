@@ -1,6 +1,6 @@
 // tailwind config is required for editor support
-import type { Config } from "tailwindcss";
 import sharedConfig from "@project/tailwind-config/tailwind.config.ts";
+import type { Config } from "tailwindcss";
 
 const config: Pick<Config, "prefix" | "presets"> = {
   prefix: "ui-",

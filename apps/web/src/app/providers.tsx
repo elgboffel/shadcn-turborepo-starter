@@ -1,8 +1,8 @@
 "use client";
 
+import { Toaster } from "@project/ui";
 import { SessionProvider } from "next-auth/react";
 import { ThemeProvider } from "next-themes";
-import { Toaster } from "@project/ui";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
