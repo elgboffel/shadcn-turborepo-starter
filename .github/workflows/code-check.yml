@@ -15,39 +15,39 @@ jobs:
           node-version: 20.x
 
       - name: Install dependencies
-        run: yarn install
+        run: npm install
 
       - name: Check linting
-        run: yarn run lint
+        run: npm run lint
 
   format:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20.x
-      
+
       - name: Install dependencies
-        run: yarn install
-      
+        run: npm install
+
       - name: Check format
-        run: yarn run format:check
+        run: npm run format:check
 
   tsc:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20.x
-      
+
       - name: Install dependencies
-        run: yarn install
-      
+        run: npm install
+
       - name: Check types
-        run: yarn run typecheck
+        run: npm run typecheck
